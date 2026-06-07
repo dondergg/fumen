@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fumen"
+version = "0.1.0"
+description = "TJA chart renderer (fumen PNG)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "GPL-3.0-or-later"
+authors = [{ name = "donder.gg" }]
+dependencies = [
+    "pillow>=10.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/dondergg/fumen"
+Repository = "https://github.com/dondergg/fumen"
+Issues = "https://github.com/dondergg/fumen/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[project.scripts]
+fumen = "fumen.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fumen"]
+
+[tool.hatch.build.targets.wheel.sources]
+"fumen" = "src/fumen"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

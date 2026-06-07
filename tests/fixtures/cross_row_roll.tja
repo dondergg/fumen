@@ -1,0 +1,13 @@
+TITLE:Cross Row Roll
+BPM:120
+WAVE:test.ogg
+
+COURSE:0
+LEVEL:1
+#START
+0000,
+0000,
+0000,
+5000,
+0800,
+#END

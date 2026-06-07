@@ -1,0 +1,10 @@
+TITLE:Cross Measure Roll
+BPM:120
+WAVE:test.ogg
+
+COURSE:0
+LEVEL:1
+#START
+500,
+08,
+#END
