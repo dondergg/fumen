@@ -19,9 +19,10 @@ def _probe_coords(course, layout):
     lane_cy = m1.y + m1.height // 2
     m7_cy = m7.header_y + header_h // 2
     don_x = int(m1.slot_x(0, len(course.measures[0].slots)))
+    # +60 clears measure number + BPM label on all platforms (font metrics vary).
     return {
         "page_margin": (10, 10),
-        "m1_header_grey": (m1.x + 30, header_cy),
+        "m1_header_grey": (m1.x + 60, header_cy),
         "m7_header_grey": (m7.x + 30, m7_cy),
         "m1_lane_grey": (m1.x + 40, lane_cy),
         "m1_lane_black_border": (m1.x + 40, m1.y),
