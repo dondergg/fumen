@@ -2,6 +2,16 @@
 
 All notable changes to this project are documented here.
 
+## [1.0.0] - 2026-06-09
+
+### Added
+
+- README: supported TJA features (metadata, notes, commands, branching, encodings)
+
+### Changed
+
+- First stable release
+
 ## [0.1.0] - 2026-06-07
 
 ### Added
