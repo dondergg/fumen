@@ -11,9 +11,50 @@ pip install git+https://github.com/dondergg/fumen.git
 fumen render chart.tja -o chart.png
 ```
 
+## Supported TJA features
+
+### Metadata
+
+`TITLE`, `SUBTITLE`, `BPM`, `COURSE`, `LEVEL`, `BALLOON`, and branch-specific balloon lists (`BALLOONNOR`, `BALLOONEXP`, `BALLOONMAS`).
+
+### Notes
+
+| Char | Meaning |
+|------|---------|
+| `0` | Rest |
+| `1` / `A` | Don |
+| `2` / `B` | Ka |
+| `3` | Big don |
+| `4` | Big ka |
+| `5`–`8` | Roll (head/tail) |
+| `6` | Big roll |
+| `7` | Balloon |
+| `9` | Big balloon |
+| `F` | Hidden (skipped) |
+
+### Commands
+
+| Command | Rendered |
+|---------|----------|
+| `#GOGOSTART` / `#GOGOEND` | Salmon gogo header + lane tint (partial spans supported) |
+| `#BPMCHANGE` | BPM label in measure header |
+| `#HSPEED` | Red `HS …` label in measure header |
+| `#BARLINEOFF` / `#BARLINEON` | Hide/show white measure divider |
+| `#MEASURE`, `#DELAY` | Parsed (timing only, not drawn) |
+| `#LYRIC` | Parsed, not drawn |
+| `#SCROLL`, `#HBSCROLL`, `#BMSCROLL` | Parsed, not drawn (gameplay scroll) |
+
+### Branching
+
+`#BRANCHSTART` / `#BRANCHEND`, `#N` / `#E` / `#R`, `#NORMAL` / `#ADVANCED` / `#MASTER`, `#SECTION`, `#LEVELHOLD` / `#LEVELHOLDEND`. Select a path with `--branch normal|advanced|master`.
+
+### Encodings
+
+UTF-8 (with or without BOM), Shift-JIS / CP932.
+
 ## Links
 
-- [CONTRIBUTING.md](CONTRIBUTING.md) — setup, CLI, API, TJA support
+- [CONTRIBUTING.md](CONTRIBUTING.md) — setup, CLI, API
 - [CHANGELOG.md](CHANGELOG.md)
 - [LICENSE](LICENSE) — GPLv3
 
